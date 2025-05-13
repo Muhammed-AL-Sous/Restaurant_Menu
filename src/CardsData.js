@@ -35,7 +35,7 @@ export const cardsData = [
     id: 4,
     title: "هامبرغر لحم",
     price: "12$",
-    img: "/public/images/pic_04.jpg",
+    img: "/images/pic_04.jpg",
     description:
       "هامبرغر لحم هو طبق شهي يتكون من شريحة لحم مشوية بين خبزتين، ويُقدم مع الخس والطماطم والبصل.",
     category: "الغداء",
