@@ -52,11 +52,7 @@ const App = () => {
           </Col>
         </Row>
 
-        <Row>
-          <Col xs={12}>
-            <CardsList itemsData={itemsData} />
-          </Col>
-        </Row>
+        <CardsList itemsData={itemsData} />
       </Container>
     </div>
   );
