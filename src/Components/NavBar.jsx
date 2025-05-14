@@ -3,15 +3,20 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function NavBar({ filterBySearch }) {
   const [searchWord, setSearchWord] = useState("");
+  const inputRef = useRef(null);
 
   const handleSearch = (e) => {
     e.preventDefault();
     filterBySearch(searchWord);
     setSearchWord("");
+
+    if (inputRef.current) {
+      inputRef.current.blur();
+    }
   };
 
   return (
@@ -30,6 +35,7 @@ function NavBar({ filterBySearch }) {
             className="search-input"
             aria-label="Search"
             value={searchWord}
+            ref={inputRef}
             onChange={(e) => setSearchWord(e.target.value)}
           />
           <Button variant="outline-primary" className="mx-2" type="submit">
